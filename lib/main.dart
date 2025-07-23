@@ -893,9 +893,8 @@ class _LandholdingsInputPageState extends State<LandholdingsInputPage> {
                     value: _selectedAcres,
                     decoration: InputDecoration(
                       labelText:
-                          localizedStrings[widget
-                              .languageCode]!['land_label']! +
-                          ' (acres)',
+                          '${localizedStrings[widget
+                              .languageCode]!['land_label']!} (acres)',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -991,7 +990,7 @@ class CropsInputPage extends StatefulWidget {
 class _CropsInputPageState extends State<CropsInputPage> {
   late FlutterTts _tts;
   late stt.SpeechToText _speech;
-  List<String> _selectedCrops = [];
+  final List<String> _selectedCrops = [];
   String? _otherCrop;
   bool _isListening = false;
 
